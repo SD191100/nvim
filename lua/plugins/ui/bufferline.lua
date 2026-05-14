@@ -2,21 +2,72 @@ return {
   "akinsho/bufferline.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   version = "*",
-  opts = {
-    options = {
-      mode = "buffers",
-      separator_style = "thin",
-      show_buffer_close_icons = false,
-
-      offsets = {
-        {
-          filetype = "NvimTree",
-          text = " ",
-          text_align = "left",
-          separator = false,
+  opts = function()
+    local bufferline = require("bufferline")
+    return {
+      options = {
+        style_preset = bufferline.style_preset.default,
+        mode = "buffers",
+        numbers = "none",
+        indicator = {
+        style ="none",
         },
-      }
-    },
-  },
-  
+        buffer_close_icon = "󰅖",
+        modified_icon = "●",
+        close_icon = "󰅖",
+        left_trunc_marker = "",
+        right_trunc_marker = "",
+        max_name_length = 18,
+        max_prefix_length = 15,
+        truncate_names = true,
+        tab_size = 18,
+        diagnostics = false,
+        show_buffer_icons = true,
+        show_buffer_close_icons = true,
+        show_close_icon = true,
+        show_tab_indicators = true,
+        separator_style = "thin",
+        enforce_regular_tabs = true,
+        always_show_bufferline = true,
+        offsets = {
+          {
+            filetype = "NvimTree",
+            text = " ",
+            text_align = "left",
+            separator = false,
+          },
+        },
+      },
+      highlights = {
+        fill                 = { bg = "#1e222a" },
+        background           = { fg = "#5c6370", bg = "#1e222a" },
+        tab                  = { fg = "#5c6370", bg = "#1e222a" },
+        tab_selected         = { fg = "#abb2bf", bg = "#282c34" },
+        tab_close            = { fg = "#5c6370", bg = "#1e222a" },
+        close_button         = { fg = "#5c6370", bg = "#1e222a" },
+        close_button_visible = { fg = "#5c6370", bg = "#1e222a" },
+        close_button_selected= { fg = "#e06c75", bg = "#282c34" },
+        buffer_visible       = { fg = "#5c6370", bg = "#1e222a" },
+        buffer_selected      = { fg = "#abb2bf", bg = "#282c34", bold = true, italic = false },
+        numbers              = { fg = "#5c6370", bg = "#1e222a" },
+        numbers_visible      = { fg = "#5c6370", bg = "#1e222a" },
+        numbers_selected     = { fg = "#abb2bf", bg = "#282c34", bold = true },
+        modified             = { fg = "#e5c07b", bg = "#1e222a" },
+        modified_visible     = { fg = "#e5c07b", bg = "#1e222a" },
+        modified_selected    = { fg = "#e5c07b", bg = "#282c34" },
+        duplicate_selected   = { fg = "#abb2bf", bg = "#282c34", italic = true },
+        duplicate_visible    = { fg = "#5c6370", bg = "#1e222a", italic = true },
+        duplicate            = { fg = "#5c6370", bg = "#1e222a", italic = true },
+        separator_selected   = { fg = "#1e222a", bg = "#282c34" },
+        separator_visible    = { fg = "#1e222a", bg = "#1e222a" },
+        separator            = { fg = "#1e222a", bg = "#1e222a" },
+        indicator_visible    = { fg = "#1e222a", bg = "#1e222a" },
+        indicator_selected   = { fg = "#282c34", bg = "#282c34" },
+        pick_selected        = { fg = "#e06c75", bg = "#282c34", bold = true, italic = true },
+        pick_visible         = { fg = "#e06c75", bg = "#1e222a", bold = true, italic = true },
+        pick                 = { fg = "#e06c75", bg = "#1e222a", bold = true, italic = true },
+        offset_separator     = { fg = "#1e222a", bg = "#1e222a" },
+      },
+    }
+  end,
 }

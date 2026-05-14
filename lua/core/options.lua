@@ -41,7 +41,7 @@ local function apply_ui()
 	})
 
 	vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", {
-		fg = "#1F2329",
+		fg = "#282C34",
 		bg = "NONE",
 	})
 
@@ -58,7 +58,7 @@ local function apply_ui()
 	})
 
 	vim.api.nvim_set_hl(0, "NvimTreeCursorLine", {
-		bg = "#1e2024",
+		bg = "#282C34",
 	})
 end
 
