@@ -12,6 +12,8 @@ return { "nvim-tree/nvim-tree.lua",
         width = 25,
         relativenumber = false,
       },
+      disable_netrw = true,
+      hijack_netrw = false,
       -- change folder arrow icons
       renderer = {
         root_folder_label = false,
@@ -33,7 +35,7 @@ return { "nvim-tree/nvim-tree.lua",
       actions = {
         open_file = {
           window_picker = {
-            enable = false,
+            enable = true,
           },
         },
       },
