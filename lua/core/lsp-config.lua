@@ -82,7 +82,7 @@ enable_servers({
 	"clangd",
 	"pyright",
 
-	"asm-lsp",
+	"asm_lsp",
 })
 
 -- lua_ls config

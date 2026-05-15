@@ -47,6 +47,8 @@ return {
 				"yamlls",
 				"marksman",
 				"taplo",
+
+				"asm_lsp",
 			},
 		})
 
