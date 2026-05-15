@@ -28,7 +28,7 @@ return {
         show_tab_indicators = true,
         separator_style = "thin",
         enforce_regular_tabs = true,
-        always_show_bufferline = true,
+        always_show_bufferline = false,
         offsets = {
           {
             filetype = "NvimTree",

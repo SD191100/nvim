@@ -14,6 +14,10 @@ return { "nvim-tree/nvim-tree.lua",
       },
       disable_netrw = true,
       hijack_netrw = false,
+      hijack_directories = {
+        enable = true,
+        auto_open = false,
+      },
       -- change folder arrow icons
       renderer = {
         root_folder_label = false,

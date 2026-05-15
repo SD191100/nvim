@@ -58,7 +58,7 @@ local function apply_ui()
 	})
 
 	vim.api.nvim_set_hl(0, "NvimTreeCursorLine", {
-		bg = "#282C34",
+		bg = "#2e2e2e",
 	})
 end
 
