@@ -19,6 +19,7 @@ return {
 				graphql = { "prettier" },
 				liquid = { "prettier" },
 				lua = { "stylua" },
+				asm = { "asmfmt" },
 				python = { "isort", "black" },
 			},
 			format_on_save = {

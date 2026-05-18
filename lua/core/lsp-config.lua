@@ -85,6 +85,10 @@ enable_servers({
 	"asm_lsp",
 })
 
+vim.lsp.config("asm_lsp", {
+	filetypes = { "asm", "nasm" },
+})
+
 -- lua_ls config
 vim.lsp.config("lua_ls", {
 	capabilities = capabilities,
