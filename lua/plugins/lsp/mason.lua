@@ -47,7 +47,7 @@ return {
 				"yamlls",
 				"marksman",
 				"taplo",
-
+                "htmx",
 				"asm_lsp",
 			},
 		})

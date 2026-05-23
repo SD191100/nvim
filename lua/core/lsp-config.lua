@@ -116,6 +116,15 @@ vim.lsp.config("graphql", {
 	},
 })
 
+--htmx config
+vim.lsp.config("htmx", {
+    capabilities = capabilities,
+    filetypes = {
+        "html",
+        "htmx",
+    }
+})
+
 -- svelte config
 vim.lsp.config("svelte", {
 	capabilities = capabilities,
