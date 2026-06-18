@@ -79,7 +79,7 @@ enable_servers({
 	"graphql",
 	"svelte",
 	"gopls",
-	"clangd",
+--	"clangd",
 	"pyright",
 
 	"asm_lsp",
@@ -89,6 +89,21 @@ vim.lsp.config("asm_lsp", {
 	filetypes = { "asm", "nasm" },
 })
 
+vim.lsp.config("clangd", {
+	capabilities = capabilities,
+
+    cmd = {
+        "clangd",
+
+        "--background-index",
+
+        "--header-insertion=never",
+
+        "--query-driver=/home/sd/.platformio/packages/toolchain-xtensa-esp32/bin/*",
+
+        "--compile-commands-dir=.",
+    },
+})
 -- lua_ls config
 vim.lsp.config("lua_ls", {
 	capabilities = capabilities,
@@ -118,11 +133,11 @@ vim.lsp.config("graphql", {
 
 --htmx config
 vim.lsp.config("htmx", {
-    capabilities = capabilities,
-    filetypes = {
-        "html",
-        "htmx",
-    }
+	capabilities = capabilities,
+	filetypes = {
+		"html",
+		"htmx",
+	},
 })
 
 -- svelte config
