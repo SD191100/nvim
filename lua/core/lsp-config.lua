@@ -152,3 +152,17 @@ vim.lsp.config("svelte", {
 		})
 	end,
 })
+
+vim.filetype.add({
+    extension = {
+        templ = "templ",
+    }
+})
+
+vim.lsp.config("templ", {
+  cmd = { "templ", "lsp" },
+  filetypes = { "templ" },
+  root_markers = { "go.mod", ".git" },
+})
+
+vim.lsp.enable("templ")

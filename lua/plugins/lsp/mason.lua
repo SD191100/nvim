@@ -48,6 +48,7 @@ return {
 				"marksman",
 				"taplo",
                 "htmx",
+                "templ",
 				"asm_lsp",
 			},
 		})
